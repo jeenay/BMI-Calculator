@@ -45,5 +45,15 @@ namespace BMI_Calculator
 		{
 
 		}
+
+		private void Button5_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void Button8_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
