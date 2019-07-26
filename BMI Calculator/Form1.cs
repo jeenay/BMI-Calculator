@@ -19,6 +19,22 @@ namespace BMI_Calculator
 		{
 			InitializeComponent();
 		}
+		public void CalculateMetric()
+		{
+			h = Double.Parse(txtHeight.Text);
+			w = Double.Parse(txtWeight.Text);
+			t = w / (h * h);
+			SumupBMI.Text = "" + t;
+
+		}
+		public void CalculateImperial()
+		{
+			h = Double.Parse(txtHeight.Text);
+			w = Double.Parse(txtWeight.Text);
+			t = (703*w) / (h * h);
+			SumupBMI.Text = "" + t;
+
+		}
 
 		private void Button3_Click(object sender, EventArgs e)
 		{
@@ -34,10 +50,18 @@ namespace BMI_Calculator
 
 		private void Button1_Click(object sender, EventArgs e)
 		{
-			h = Double.Parse(txtHeight.Text);
-			w = Double.Parse(txtWeight.Text);
-			t = w / (h * h);
-			SumupBMI.Text = "" + t;
+			if (lblMetric.Checked==true)
+			{
+				CalculateMetric();
+			}
+			else if (lblImperial.Checked==true)
+			{
+				CalculateImperial();
+			}
+			else
+			{
+				SumupBMI.Text = "Please enter a valid option";
+			}
 
 		}
 
