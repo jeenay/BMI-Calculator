@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -52,9 +53,9 @@
 			this.btn7 = new System.Windows.Forms.Button();
 			this.lblMetric = new System.Windows.Forms.RadioButton();
 			this.lblImperial = new System.Windows.Forms.RadioButton();
-			this.txtRemarks = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.tableLayoutPanel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -100,32 +101,32 @@
 			// txtWeight
 			// 
 			this.txtWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtWeight.Location = new System.Drawing.Point(329, 87);
+			this.txtWeight.Location = new System.Drawing.Point(255, 87);
 			this.txtWeight.Multiline = true;
 			this.txtWeight.Name = "txtWeight";
-			this.txtWeight.Size = new System.Drawing.Size(263, 36);
+			this.txtWeight.Size = new System.Drawing.Size(337, 36);
 			this.txtWeight.TabIndex = 1;
 			this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// txtHeight
 			// 
 			this.txtHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtHeight.Location = new System.Drawing.Point(329, 156);
+			this.txtHeight.Location = new System.Drawing.Point(255, 156);
 			this.txtHeight.Multiline = true;
 			this.txtHeight.Name = "txtHeight";
-			this.txtHeight.Size = new System.Drawing.Size(263, 36);
+			this.txtHeight.Size = new System.Drawing.Size(337, 36);
 			this.txtHeight.TabIndex = 5;
 			this.txtHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// SumupBMI
 			// 
 			this.SumupBMI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.SumupBMI.Location = new System.Drawing.Point(329, 227);
+			this.SumupBMI.Location = new System.Drawing.Point(255, 227);
 			this.SumupBMI.Multiline = true;
 			this.SumupBMI.Name = "SumupBMI";
-			this.SumupBMI.Size = new System.Drawing.Size(263, 36);
+			this.SumupBMI.Size = new System.Drawing.Size(337, 36);
 			this.SumupBMI.TabIndex = 6;
-			this.SumupBMI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.SumupBMI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// button1
 			// 
@@ -162,6 +163,7 @@
 			// 
 			// tableLayoutPanel1
 			// 
+			this.tableLayoutPanel1.BackColor = System.Drawing.Color.SteelBlue;
 			this.tableLayoutPanel1.ColumnCount = 3;
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -177,6 +179,7 @@
 			this.tableLayoutPanel1.Controls.Add(this.btn9, 2, 0);
 			this.tableLayoutPanel1.Controls.Add(this.btn8, 1, 0);
 			this.tableLayoutPanel1.Controls.Add(this.btn7, 0, 0);
+			this.tableLayoutPanel1.ForeColor = System.Drawing.Color.White;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(36, 288);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 4;
@@ -192,145 +195,175 @@
 			this.btnequals.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnequals.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnequals.BackColor = System.Drawing.Color.SeaGreen;
+			this.btnequals.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnequals.Location = new System.Drawing.Point(436, 156);
 			this.btnequals.Name = "btnequals";
 			this.btnequals.Size = new System.Drawing.Size(212, 46);
 			this.btnequals.TabIndex = 11;
 			this.btnequals.Text = "=";
-			this.btnequals.UseVisualStyleBackColor = true;
+			this.btnequals.UseVisualStyleBackColor = false;
+			this.btnequals.Click += new System.EventHandler(this.CalculatorButton_Click);
 			// 
 			// btn0
 			// 
 			this.btn0.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn0.BackColor = System.Drawing.Color.SteelBlue;
+			this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn0.ForeColor = System.Drawing.Color.White;
 			this.btn0.Location = new System.Drawing.Point(219, 156);
 			this.btn0.Name = "btn0";
 			this.btn0.Size = new System.Drawing.Size(211, 46);
 			this.btn0.TabIndex = 10;
 			this.btn0.Text = "0";
-			this.btn0.UseVisualStyleBackColor = true;
+			this.btn0.UseVisualStyleBackColor = false;
+			this.btn0.Click += new System.EventHandler(this.CalculatorButton_Click);
 			// 
 			// btn3
 			// 
 			this.btn3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn3.BackColor = System.Drawing.Color.SteelBlue;
+			this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn3.ForeColor = System.Drawing.Color.White;
 			this.btn3.Location = new System.Drawing.Point(436, 105);
 			this.btn3.Name = "btn3";
 			this.btn3.Size = new System.Drawing.Size(212, 45);
 			this.btn3.TabIndex = 8;
 			this.btn3.Text = "3";
-			this.btn3.UseVisualStyleBackColor = true;
+			this.btn3.UseVisualStyleBackColor = false;
+			this.btn3.Click += new System.EventHandler(this.CalculatorButton_Click);
 			// 
 			// btn2
 			// 
 			this.btn2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn2.BackColor = System.Drawing.Color.SteelBlue;
+			this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn2.ForeColor = System.Drawing.Color.White;
 			this.btn2.Location = new System.Drawing.Point(219, 105);
 			this.btn2.Name = "btn2";
 			this.btn2.Size = new System.Drawing.Size(211, 45);
 			this.btn2.TabIndex = 7;
 			this.btn2.Text = "2";
-			this.btn2.UseVisualStyleBackColor = true;
+			this.btn2.UseVisualStyleBackColor = false;
+			this.btn2.Click += new System.EventHandler(this.CalculatorButton_Click);
 			// 
 			// btn1
 			// 
 			this.btn1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn1.BackColor = System.Drawing.Color.SteelBlue;
+			this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn1.ForeColor = System.Drawing.Color.White;
 			this.btn1.Location = new System.Drawing.Point(3, 105);
 			this.btn1.Name = "btn1";
 			this.btn1.Size = new System.Drawing.Size(210, 45);
 			this.btn1.TabIndex = 6;
 			this.btn1.Text = "1";
-			this.btn1.UseVisualStyleBackColor = true;
+			this.btn1.UseVisualStyleBackColor = false;
+			this.btn1.Click += new System.EventHandler(this.CalculatorButton_Click);
 			// 
 			// btn6
 			// 
 			this.btn6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn6.BackColor = System.Drawing.Color.SteelBlue;
+			this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn6.ForeColor = System.Drawing.Color.White;
 			this.btn6.Location = new System.Drawing.Point(436, 54);
 			this.btn6.Name = "btn6";
 			this.btn6.Size = new System.Drawing.Size(212, 45);
 			this.btn6.TabIndex = 5;
 			this.btn6.Text = "6";
-			this.btn6.UseVisualStyleBackColor = true;
-			this.btn6.Click += new System.EventHandler(this.Button8_Click);
+			this.btn6.UseVisualStyleBackColor = false;
+			this.btn6.Click += new System.EventHandler(this.CalculatorButton_Click);
 			// 
 			// btn5
 			// 
 			this.btn5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn5.BackColor = System.Drawing.Color.SteelBlue;
+			this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn5.ForeColor = System.Drawing.Color.White;
 			this.btn5.Location = new System.Drawing.Point(219, 54);
 			this.btn5.Name = "btn5";
 			this.btn5.Size = new System.Drawing.Size(211, 45);
 			this.btn5.TabIndex = 4;
 			this.btn5.Text = "5";
-			this.btn5.UseVisualStyleBackColor = true;
+			this.btn5.UseVisualStyleBackColor = false;
+			this.btn5.Click += new System.EventHandler(this.CalculatorButton_Click);
 			// 
 			// btn4
 			// 
 			this.btn4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn4.BackColor = System.Drawing.Color.SteelBlue;
+			this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn4.ForeColor = System.Drawing.Color.White;
 			this.btn4.Location = new System.Drawing.Point(3, 54);
 			this.btn4.Name = "btn4";
 			this.btn4.Size = new System.Drawing.Size(210, 45);
 			this.btn4.TabIndex = 3;
 			this.btn4.Text = "4";
-			this.btn4.UseVisualStyleBackColor = true;
+			this.btn4.UseVisualStyleBackColor = false;
+			this.btn4.Click += new System.EventHandler(this.CalculatorButton_Click);
 			// 
 			// btn9
 			// 
 			this.btn9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn9.BackColor = System.Drawing.Color.SteelBlue;
+			this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn9.ForeColor = System.Drawing.Color.White;
 			this.btn9.Location = new System.Drawing.Point(436, 3);
 			this.btn9.Name = "btn9";
 			this.btn9.Size = new System.Drawing.Size(212, 45);
 			this.btn9.TabIndex = 2;
 			this.btn9.Text = "9";
-			this.btn9.UseVisualStyleBackColor = true;
-			this.btn9.Click += new System.EventHandler(this.Button5_Click);
+			this.btn9.UseVisualStyleBackColor = false;
+			this.btn9.Click += new System.EventHandler(this.CalculatorButton_Click);
 			// 
 			// btn8
 			// 
 			this.btn8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn8.BackColor = System.Drawing.Color.SteelBlue;
+			this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn8.ForeColor = System.Drawing.Color.White;
 			this.btn8.Location = new System.Drawing.Point(219, 3);
 			this.btn8.Name = "btn8";
 			this.btn8.Size = new System.Drawing.Size(211, 45);
 			this.btn8.TabIndex = 1;
 			this.btn8.Text = "8";
-			this.btn8.UseVisualStyleBackColor = true;
+			this.btn8.UseVisualStyleBackColor = false;
+			this.btn8.Click += new System.EventHandler(this.CalculatorButton_Click);
 			// 
 			// btn7
 			// 
 			this.btn7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn7.BackColor = System.Drawing.Color.SteelBlue;
+			this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn7.ForeColor = System.Drawing.Color.White;
 			this.btn7.Location = new System.Drawing.Point(3, 3);
 			this.btn7.Name = "btn7";
 			this.btn7.Size = new System.Drawing.Size(210, 45);
 			this.btn7.TabIndex = 0;
 			this.btn7.Text = "7";
-			this.btn7.UseVisualStyleBackColor = true;
+			this.btn7.UseVisualStyleBackColor = false;
+			this.btn7.Click += new System.EventHandler(this.CalculatorButton_Click);
 			// 
 			// lblMetric
 			// 
@@ -356,31 +389,22 @@
 			this.lblImperial.Text = "Imperial";
 			this.lblImperial.UseVisualStyleBackColor = true;
 			// 
-			// txtRemarks
+			// pictureBox1
 			// 
-			this.txtRemarks.Location = new System.Drawing.Point(735, 405);
-			this.txtRemarks.Multiline = true;
-			this.txtRemarks.Name = "txtRemarks";
-			this.txtRemarks.Size = new System.Drawing.Size(369, 46);
-			this.txtRemarks.TabIndex = 13;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(732, 370);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(96, 25);
-			this.label5.TabIndex = 14;
-			this.label5.Text = "Remarks";
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(735, 300);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(408, 193);
+			this.pictureBox1.TabIndex = 16;
+			this.pictureBox1.TabStop = false;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.LightGray;
 			this.ClientSize = new System.Drawing.Size(1155, 505);
-			this.Controls.Add(this.label5);
-			this.Controls.Add(this.txtRemarks);
+			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.lblImperial);
 			this.Controls.Add(this.lblMetric);
 			this.Controls.Add(this.tableLayoutPanel1);
@@ -396,9 +420,10 @@
 			this.Controls.Add(this.label1);
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Form1";
+			this.Text = "BMI Calculator";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.tableLayoutPanel1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -430,8 +455,7 @@
 		private System.Windows.Forms.Button btn7;
 		private System.Windows.Forms.RadioButton lblMetric;
 		private System.Windows.Forms.RadioButton lblImperial;
-		private System.Windows.Forms.TextBox txtRemarks;
-		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.PictureBox pictureBox1;
 	}
 }
 

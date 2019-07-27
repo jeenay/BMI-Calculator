@@ -19,6 +19,7 @@ namespace BMI_Calculator
 		{
 			InitializeComponent();
 		}
+		
 		public void CalculateMetric()
 		{
 			h = Double.Parse(txtHeight.Text);
@@ -70,13 +71,16 @@ namespace BMI_Calculator
 
 		}
 
-		private void Button5_Click(object sender, EventArgs e)
+		private void CalculatorButton_Click(object sender, EventArgs e)
 		{
+			var TheButton = sender as Button;
+			int ButtonValue;
+			bool Result = int.TryParse(TheButton.Text, out ButtonValue);
+			if(Result)
+			{
+					txtWeight.Text = TheButton.Text;
+			}
 
-		}
-
-		private void Button8_Click(object sender, EventArgs e)
-		{
 
 		}
 	}
